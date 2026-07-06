@@ -1,8 +1,8 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import Search from "@/components/Search";
-import CategoryCard from "@/components/CategoryCard";
-import Footer from "@/components/Footer";
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import Search from "../components/Search";
+import CategoryCard from "../components/CategoryCard";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
       <Hero />
       <Search />
 
-      <section className="mx-auto mt-20 max-w-7xl px-6">
+      <section className="mx-auto mt-24 max-w-7xl px-6">
 
         <h2 className="mb-8 text-4xl font-bold">
 
