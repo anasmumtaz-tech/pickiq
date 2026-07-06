@@ -1,14 +1,28 @@
 export default function Hero() {
   return (
-    <section className="px-6 py-24 text-center">
-      <h1 className="text-6xl font-bold">
-        Shop Smarter with AI
-      </h1>
+    <section className="bg-gradient-to-b from-blue-50 to-white py-28">
 
-      <p className="mx-auto mt-6 max-w-3xl text-xl text-gray-600">
-        Compare products, discover the best deals, and make better buying
-        decisions with AI-powered recommendations.
-      </p>
+      <div className="mx-auto max-w-5xl text-center px-6">
+
+        <h1 className="text-6xl font-bold leading-tight">
+
+          Find The Perfect Product
+
+          <span className="block text-blue-600">
+            With AI
+          </span>
+
+        </h1>
+
+        <p className="mt-8 text-xl text-gray-600">
+
+          Compare products, discover the best deals,
+          and make smarter buying decisions.
+
+        </p>
+
+      </div>
+
     </section>
   );
 }
