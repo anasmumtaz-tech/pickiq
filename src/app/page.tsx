@@ -1,9 +1,9 @@
-import Navbar from "../components/Layout/Navbar";
+import Navbar from "../components/layout/Navbar";
 import Hero from "../components/home/Hero";
 import Search from "../components/home/Search";
 import ProductCard from "../components/product/ProductCard";
 import CategoryCard from "../components/CategoryCard";
-import Footer from "../components/Layout/Footer";
+import Footer from "../components/layout/Footer";
 
 import { products } from "../data/products";
 
@@ -46,11 +46,14 @@ export default function Home() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((product) => (
             <ProductCard
-              key={product.name}
+              key={product.id}
               name={product.name}
               price={`₹${product.price.toLocaleString("en-IN")}`}
+              slug={product.slug}
+              rating={product.rating}
             />
           ))}
+          
         </div>
       </section>
 

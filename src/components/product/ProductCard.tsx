@@ -5,17 +5,21 @@ import { Button } from "@/components/ui/button";
 type ProductCardProps = {
   name: string;
   price: string;
+  slug: string;
+  rating?: number;
 };
 
 export default function ProductCard({
   name,
   price,
+  slug,
+  rating = 4.8,
 }: ProductCardProps) {
   return (
-    <div className="group overflow-hidden rounded-2xl border bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+    <div className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
       {/* Product Image */}
       <div className="flex aspect-square items-center justify-center bg-slate-100">
-        <div className="h-48 w-48 rounded-xl bg-slate-200 transition group-hover:scale-105" />
+        <div className="h-48 w-48 rounded-xl bg-slate-200 transition duration-300 group-hover:scale-105" />
       </div>
 
       {/* Content */}
@@ -29,13 +33,13 @@ export default function ProductCard({
             />
           ))}
 
-          <span className="ml-2 text-sm text-gray-500">
-            4.8
+          <span className="ml-2 text-sm text-slate-500">
+            {rating}
           </span>
         </div>
 
         {/* Product Name */}
-        <h3 className="line-clamp-2 text-lg font-semibold">
+        <h3 className="line-clamp-2 text-lg font-semibold text-slate-900">
           {name}
         </h3>
 
@@ -46,12 +50,7 @@ export default function ProductCard({
 
         {/* Buttons */}
         <div className="flex gap-3">
-          <Link
-            href={`/products/${name
-              .toLowerCase()
-              .replace(/\s+/g, "-")}`}
-            className="flex-1"
-          >
+          <Link href={`/products/${slug}`} className="flex-1">
             <Button className="w-full">
               View Details
             </Button>
