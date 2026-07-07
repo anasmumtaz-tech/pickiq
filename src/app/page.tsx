@@ -1,11 +1,13 @@
-import Navbar from "../components/layout/Navbar";
-import Hero from "../components/home/Hero";
-import Search from "../components/home/Search";
-import ProductCard from "../components/product/ProductCard";
-import CategoryCard from "../components/CategoryCard";
-import Footer from "../components/layout/Footer";
+import Navbar from "@/components/layout/Navbar";
+import Hero from "@/components/home/Hero";
+import Search from "@/components/home/Search";
+import ProductCard from "@/components/product/ProductCard";
+import CategoryCard from "@/components/CategoryCard";
+import Footer from "@/components/layout/Footer";
+import TrustBar from "@/components/home/TrustBar";
+import AISuggestions from "@/components/home/AISuggestions";
 
-import { products } from "../data/products";
+import { products } from "@/data/products";
 
 export default function Home() {
   return (
@@ -14,7 +16,11 @@ export default function Home() {
 
       <Hero />
 
+      <TrustBar />
+
       <Search />
+
+      <AISuggestions />
 
       {/* Trending Searches */}
       <section className="mx-auto mt-10 max-w-5xl px-6">
